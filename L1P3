@@ -1,0 +1,13 @@
+package com.kaa.L1P1;
+
+public class L1P3 {
+    public static void main( String args[]) {
+        System.out.println("Hello, "+args[0]);
+        System.out.println("Nice to meet you, "+args[1]);
+        System.out.println("Bonjour, "+args[2]);
+        try {
+            Thread.sleep(2500);
+        } catch (InterruptedException e){}
+        System.out.println("Where is D'Artagnan?!");
+    }
+}
