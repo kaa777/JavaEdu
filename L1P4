@@ -1,0 +1,17 @@
+package com.kaa.L1P1;
+
+public class L1P4 {
+    public static void main(String args[]) {
+        try {
+            int sum = 0;
+            int arg0 = Integer.parseInt(args[0]);
+            int arg1 = Integer.parseInt(args[1]);
+            int arg2 = Integer.parseInt(args[2]);
+            int arg3 = Integer.parseInt(args[3]);
+            sum = arg0 + arg1 + arg2 + arg3;
+            System.out.println("The result of " + args[0] + "+" + args[1] + "+" + args[1] + "+" + args[3] + " is " + sum);
+        } catch (NumberFormatException e) {
+            System.out.println("Error - please provide only integer value as an argument.");
+        }
+    }
+}
