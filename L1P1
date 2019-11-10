@@ -1,0 +1,7 @@
+package com.kaa.L1P1;
+
+public class L1P1 {
+    public static void main(String args[]) {
+        System.out.println("Hello, world!");
+    }
+}
