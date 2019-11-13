@@ -1,0 +1,26 @@
+package com.kaa.Lecture2;
+
+public class DataTypes {
+    public static void main(String[] args) {
+        boolean bool = true;
+        char cha1 = 'a';
+        char cha2 = 'b';
+        byte byt = -1;
+        short shrt1 = 111;
+        short shrt2 = -111;
+        int intgr = 7;
+        long lng = 777;
+        double dbl = 1.0d;
+        float flt = 1.0f;
+        String string1 = " String1 ";
+        String string2 = " String2 ";
+        System.out.println("The sum of char and short variables is " + (cha1 + shrt1));
+        System.out.println("The multiplication of short and byte is " + (shrt2 * byt));
+        System.out.println("The sum of int and double is " + (intgr + dbl));
+        System.out.println("The division of float and byte is " + (flt / byt));
+        System.out.println("The concatenation of double and String is " + dbl + string1);
+        System.out.println("The concatenation of String and double is " + string2 + dbl);
+        System.out.println("The concatenation of String and boolean is " + string1 + bool);
+        System.out.println("The concatenation of byte and String and long is " + byt + string2 + lng);
+    }
+}
