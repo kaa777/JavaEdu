@@ -1,0 +1,68 @@
+package com.kaa.Lecture2;
+
+public class ConditionalOperators {
+    public static void main(String[] args) {
+
+        //Create two int variables and assign their values randomly.
+        int var1 = (int)(Math.random()*10);
+        int var2 = (int)(Math.random()*10);
+        //If var1 is bigger tat var2, show the message “The first variable is bigger that the second one. Values are: var1, var2”.
+        if (var1 > var2)
+            System.out.println("The first variable is bigger that the second one. Values are: " + var1 + " and " + var2);
+        //If they are equals, show “Both variables have the same value: var1”.
+        else if (var1 == var2)
+            System.out.println("Both variables have the same value: "+var1);
+        //If var2 is bigger, show the message “It is weird, but the second variable is bigger”.
+        else
+            System.out.println("It is weird, but the second variable is bigger. Values are: " + var1 + " and " + var2);
+
+        //Create two double variables and try to do the same as in the task above
+        double dbl1 = Math.random();
+        double dbl2 = Math.random();
+        if (dbl1 > dbl2)
+            System.out.println("The first double variable is bigger that the second one. Values are: " + dbl1 + ", " + dbl2);
+        else if (var1 == var2)
+            System.out.println("Both double variables have the same value: "+dbl1);
+        else
+            System.out.println("It is weird, but the second double variable is bigger. Values are: " + dbl1 +" and "+dbl2);
+
+        //In the command line pass the letter of alphabet.
+        //▪ If it is one the first (a/b/c) or last (x/y/z) three letters, show this message “The
+        //letter A (corresponding letter) is on the position 1 (corresponding position) in
+        //the alphabet”.
+        //▪ If it is a different letter, show “The letter is somewhere in the middle of
+        //alphabet”.
+        try {
+            char letter = args[0].charAt(0);
+            switch (letter){
+                case 'a':{
+                    System.out.println("The letter "+letter+" is on position 1 in the alphabet.");
+                    break;
+                }
+                case 'b':{
+                    System.out.println("The letter "+letter+" is on position 2 in the alphabet.");
+                    break;
+                }
+                case 'c':{
+                    System.out.println("The letter "+letter+" is on position 3 in the alphabet.");
+                }
+                case 'x':{
+                    System.out.println("The letter "+letter+" is on position 24 in the alphabet.");
+                    break;
+                }
+                case 'y':{
+                    System.out.println("The letter "+letter+" is on position 25 in the alphabet.");
+                    break;
+                }
+                case 'z':{
+                    System.out.println("The letter "+letter+" is on position 26 in the alphabet.");
+                }
+            }
+
+        }
+        catch (NumberFormatException e) {
+            System.out.println("Error - please provide only char value as an argument.");
+        }
+
+    }
+}
