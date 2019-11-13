@@ -57,6 +57,9 @@ public class ConditionalOperators {
                 case 'z':{
                     System.out.println("The letter "+letter+" is on position 26 in the alphabet.");
                 }
+                default:{
+                    System.out.println("The letter "+letter+" is somewhere in the middle of alphabet.");
+                }
             }
 
         }
