@@ -7,20 +7,19 @@ public class SecurityCheck2 {
         String anal = "Lesya|qazS|Analyst";
         String cust = "Petro|1234|Customer";
         if (args[0].equals(adm.substring(0, args[0].length())))
-            if (args[1].equals(adm.substring(5,12)))
-                System.out.println("Welcome, "+args[0]+"! Your group is "+adm.substring(adm.length()-13)+" and you have all permissions.");
+            if (args[1].equals(adm.substring(5, 12)))
+                System.out.println("Welcome, " + args[0] + "! Your group is " + adm.substring(adm.length() - 13) + " and you have all permissions.");
             else
                 System.out.println("Wrong username/password");
-         else
-            if (args[0].equals(serv.substring(0, args[0].length())))
-                if (args[1].equals(serv.substring(args[0].length()+1,8)))
-                    System.out.println("Welcome, "+args[0]+"! Your group is "+serv.substring(serv.length()-16)+" and you have CS specific permissions.");
-                else
-                    System.out.println("Wrong password1");
-                else
-                System.out.println("Wrong username1");
-                
-                // и т.д.
+        else if (args[0].equals(serv.substring(0, args[0].length())))
+            if (args[1].equals(serv.substring(args[0].length() + 1, 8)))
+                System.out.println("Welcome, " + args[0] + "! Your group is " + serv.substring(serv.length() - 16) + " and you have CS specific permissions.");
+            else
+                System.out.println("Wrong password1");
+        else
+            System.out.println("Wrong username1");
+
+        // и т.д.
     }
 
 }
