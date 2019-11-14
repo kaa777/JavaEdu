@@ -1,0 +1,17 @@
+package com.kaa.Lecture2;
+
+public class SecurityCheck {
+    public static void main(String[] args) {
+//        Security check:
+//        A user enters username and password in program arguments. If the password that is
+//        already present in Java code is correct for this user, then program will
+//        welcome user. In Java code we will store username-password as: ‘Alex|qwertY1’.
+        String user = "Alex|qwertY1";
+//        If login successful, show ‘Welcome, ${username_from_console}!’. Otherwise,
+//      ‘Incorrect username/password’.
+        if ((user.substring(0, 4).equals(args[0])) && (user.substring(user.length() - 7).equals(args[1])))
+            System.out.println("Welcome, " + args[0]);
+        else
+            System.out.println("Incorrect username/password");
+    }
+}
