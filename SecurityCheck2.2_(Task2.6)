@@ -1,0 +1,44 @@
+package com.kaa.Lecture2;
+
+public class SecurityCheck2_2_Task2_6 {
+
+    // A user enters arguments username=TestUser password=TestPassword to the program
+
+    public static void main(String[] args) {
+        // Substring and convert string value to array to assign an index to each value.
+        String cred = "Alex|qwertY1";
+        String pipe = "|";
+        String[] credArr = {cred.substring(0, cred.indexOf(pipe)), (cred.substring(cred.indexOf(pipe) + 1))};
+        // Values are split and assigned
+        String username = credArr[0];
+        String password = credArr[1];
+
+        // The system checks what is the first argument passed – username or password. If it is username, substring the
+        // value and store it in variable. Then substring the value of password from the second argument and store it.
+
+        if (args[0].contains(username)) {
+            // Added protection from extra spaces input from the command line.
+            String InputUsername = args[0].trim();
+            String InputPassword = args[1].trim();
+
+            // Then the system checks if username and password entered are correct using stored in constants values. If
+            // login and password are correct, show ‘Login successful’ message. Otherwise, show ‘Login failed’.
+
+            if ((username.equals(InputUsername)) && (password.equals(InputPassword))) {
+                System.out.println("Login successful");
+            } else
+                System.out.println("Login failed");
+
+            // If user enters the password first, do the process vice versa.
+
+        } else if (args[0].contains(password)) {
+            // Added protection from extra spaces input from the command line.
+            String InputPassword = args[0].trim();
+            String InputUsername = args[1].trim();
+            if ((username.equals(InputUsername)) && (password.equals(InputPassword))) {
+                System.out.println("Login successful");
+            } else
+                System.out.println("Login failed");
+        }
+    }
+}
