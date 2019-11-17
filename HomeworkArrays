@@ -1,0 +1,49 @@
+package com.kaa.Lecture2;
+
+public class HomeworkArrays {
+/*
+ Using different types of initialization create an array of:
+▪ 5 String elements
+▪ 10 boolean elements
+▪ 1 double
+▪ Create an array of 10 int; put only even values inside; show several odd values; show the
+length of the array
+*/
+
+    public static void main(String[] args) {
+        String[] StringArray = new String[5];
+        boolean[] BoolArray = new boolean[10];
+        double[] DblArray = new double[1];
+
+        // Create an array of 10 int
+        int[] IntArray = new int[10];
+
+        // Fill array with consecutive values starting from 1 and up to array's length limit.
+
+        for (int i = 0; i < IntArray.length; i++)
+            IntArray[i] = i + 1;
+
+        // Show all elements from the array
+        System.out.println("Showing all elements from the array");
+        for (int i = 0; i < IntArray.length; i++)
+            System.out.println("Element at index " + i +
+                    " : " + IntArray[i]);
+        System.out.println();
+
+        // Show only even values from the array
+        System.out.println("Showing only even elements from the array");
+        for (int i = 1; i < IntArray.length; i = i + 2)
+            System.out.println("Element at index " + i +
+                    " : " + IntArray[i]);
+        System.out.println();
+
+        // Show only odd values from the array
+        System.out.println("Showing only odd elements from the array");
+        for (int i = 0; i < IntArray.length; i = i + 2)
+            System.out.println("Element at index " + i +
+                    " : " + IntArray[i]);
+        // Show the length of the array.
+        System.out.println();
+        System.out.println("Length of the given array is " + IntArray.length);
+    }
+}
