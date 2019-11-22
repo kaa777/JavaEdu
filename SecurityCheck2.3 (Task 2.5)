@@ -10,16 +10,16 @@ public class SecurityCheck2_3_Task2_5 {
             String userName = userNames.toString();
 
             if (userInputName.equals(userName)) {
-                if (userInputPass.equals(usersDatabase.valueOf(userInputName).password)) ;
+                if (userInputPass.equals(usersDatabase.valueOf(userInputName).password))
                 {
-                    System.out.println("Welcome, " + userInputName + "! Your group is "
+                    System.out.println("Welcome, " + usersDatabase.valueOf(userInputName) + "! Your group is "
                             + usersDatabase.valueOf(userInputName).department
                             + usersDatabase.valueOf(userInputName).welcomeMessage);
                     //break;
                 }
-//            } else {
-//                System.out.println("Login failed");
-                //break;
+            } else {
+                System.out.println("Login failed");
+                // break;
             }
         }
 
