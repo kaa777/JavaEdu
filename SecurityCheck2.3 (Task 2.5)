@@ -1,0 +1,46 @@
+package com.kaa.Lecture2;
+
+public class SecurityCheck2_3_Task2_5 {
+    public static void main(String[] args) {
+        String userInputName = args[0].toUpperCase();
+        String userInputPass = args[1];
+
+        usersDatabase[] userList = usersDatabase.values();
+        for (usersDatabase userNames : userList) {
+            String userName = userNames.toString();
+
+            if (userInputName.equals(userName)) {
+                if (userInputPass.equals(usersDatabase.valueOf(userInputName).password)) ;
+                {
+                    System.out.println("Welcome, " + userInputName + "! Your group is "
+                            + usersDatabase.valueOf(userInputName).department
+                            + usersDatabase.valueOf(userInputName).welcomeMessage);
+                    //break;
+                }
+//            } else {
+//                System.out.println("Login failed");
+                //break;
+            }
+        }
+
+
+    }
+
+    public enum usersDatabase {
+        ALEX("qwertY1", "Admin", " and you have all permissions."),
+        MARK("ewq", "Customer service", " and you have Customer service specific permissions."),
+        LESYA("qazS", "Analyst", " and you have reports permissions."),
+        PETRO("1234", "Customer", " and you have permissions to view and buy.");
+
+        private String password;
+        private String department;
+        private String welcomeMessage;
+
+        usersDatabase(String password, String department, String welcomeMessage) {
+            this.password = password;
+            this.department = department;
+            this.welcomeMessage = welcomeMessage;
+            // для чего нужен этот блок?
+        }
+    }
+}
