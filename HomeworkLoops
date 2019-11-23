@@ -26,7 +26,7 @@ public class HomeworkLoops {
 
         // Show only even values from the array
         System.out.println("Showing only even numbers from the array of 10 elements:");
-        for (int i = 0; i < intArray.length; i++){
+        for (int i = 0; i < intArray.length; i++) {
             if (intArray[i] % 2 == 0) {
                 System.out.println("Element at index " + i +
                         " is even: " + intArray[i]);
@@ -51,7 +51,8 @@ public class HomeworkLoops {
                 System.out.println("You just typed: " + inputString);
                 inputString = in.nextLine();
             }
-            while (!"quit".equalsIgnoreCase(inputString)); { //Protection from the uppercase input of the termination command.
+            while (!"quit".equalsIgnoreCase(inputString));
+            { //Protection from the uppercase input of the termination command.
             }
         }
         //TASK 3.4 Create an array of 100 int; put only even values inside; show all values; show only values
