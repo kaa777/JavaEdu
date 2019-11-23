@@ -5,26 +5,50 @@ public class SecurityCheck2_3_Task2_5 {
         String userInputName = args[0].toUpperCase();
         String userInputPass = args[1];
 
-        usersDatabase[] userList = usersDatabase.values();
-        for (usersDatabase userNames : userList) {
-            String userName = userNames.toString();
-
-            if (userInputName.equals(userName)) {
-                if (userInputPass.equals(usersDatabase.valueOf(userInputName).password))
-                {
+        switch (userInputName) {
+            case "ALEX":
+                if (userInputPass.equals(usersDatabase.valueOf(userInputName).password)) {
                     System.out.println("Welcome, " + usersDatabase.valueOf(userInputName) + "! Your group is "
                             + usersDatabase.valueOf(userInputName).department
                             + usersDatabase.valueOf(userInputName).welcomeMessage);
-                    //break;
+                    break;
+                } else {
+                    System.out.println("Login failed");
+                    break;
                 }
-            } else {
-                System.out.println("Login failed");
-                // break;
-            }
+            case "MARK":
+                if (userInputPass.equals(usersDatabase.valueOf(userInputName).password)) {
+                    System.out.println("Welcome, " + usersDatabase.valueOf(userInputName) + "! Your group is "
+                            + usersDatabase.valueOf(userInputName).department
+                            + usersDatabase.valueOf(userInputName).welcomeMessage);
+                    break;
+                } else {
+                    System.out.println("Login failed");
+                    break;
+                }
+            case "LESYA":
+                if (userInputPass.equals(usersDatabase.valueOf(userInputName).password)) {
+                    System.out.println("Welcome, " + usersDatabase.valueOf(userInputName) + "! Your group is "
+                            + usersDatabase.valueOf(userInputName).department
+                            + usersDatabase.valueOf(userInputName).welcomeMessage);
+                    break;
+                } else {
+                    System.out.println("Login failed");
+                    break;
+                }
+            case "PETRO":
+                if (userInputPass.equals(usersDatabase.valueOf(userInputName).password)) {
+                    System.out.println("Welcome, " + usersDatabase.valueOf(userInputName) + "! Your group is "
+                            + usersDatabase.valueOf(userInputName).department
+                            + usersDatabase.valueOf(userInputName).welcomeMessage);
+                    break;
+                } else {
+                    System.out.println("Login failed");
+                    break;
+                }
         }
-
-
     }
+
 
     public enum usersDatabase {
         ALEX("qwertY1", "Admin", " and you have all permissions."),
