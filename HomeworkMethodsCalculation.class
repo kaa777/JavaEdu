@@ -1,0 +1,68 @@
+package com.kaa.Lecture3;
+
+public class HomeworkMethodsCalculation {
+    public static void main(String[] args) {
+        System.out.println(addition(2, 2));
+        division(10, 2);
+        calculate(4, 2, "DIVISION");
+
+    }
+
+    // Create a method that will sum two arguments passed in and will return the result.
+    //Show the result in SOUT inside main() method (the result is calculated in inside the
+    //method though)
+    private static int addition(int arg1, int arg2) {
+        return arg1 + arg2;
+    }
+
+    // Create a method that will divide two arguments passed in and will print the result
+    //(nothing is returned)
+    private static void division(int arg1, int arg2) {
+        System.out.println(arg1 / arg2);
+    }
+
+    private static double calculate(double num1, double num2, String operation) {
+        Operations op = Operations.valueOf(operation);
+        double result = op.apply((num1), (num2));
+        //String result = arg1+Calculation.valueOf(operation).Action+arg2;
+        //System.out.println(arg1+Calculation.valueOf(operation).Action+arg2);
+        System.out.println("The result of "+Operations.valueOf(operation)+" is "+result);
+        return result;
+    }
+
+    // Create a calculate() method that will accept two digits and mathematical operation
+    //(represented as enum) as arguments:
+    //▪ Corresponding operation is performed for arguments
+    //▪ Method:
+    //● returns double
+    //● SOUT the result inside the method
+    //▪ Examples:
+    //● Methods is invoked as calculate(33, 3, DIVISION), method must print
+    //“The result of division is 11”
+    //● Method is invoked as calculate(27, 23, SUBTRACTION), method must
+    //print “The result of subtraction is 4”
+    enum Operations {
+        ADDITION {
+            public double apply(double a, double b) {
+                return a + b;
+            }
+        },
+        SUBTRACTION {
+            public double apply(double a, double b) {
+                return a - b;
+            }
+        },
+        MULTIPLICATION {
+            public double apply(double a, double b) {
+                return a * b;
+            }
+        },
+        DIVISION {
+            public double apply(double a, double b) {
+                return a / b;
+            }
+        };
+
+        public abstract double apply(double a, double b);
+    }
+}
