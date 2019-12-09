@@ -1,0 +1,59 @@
+package com.kaa.Lecture4;
+
+import java.time.LocalDate;
+
+public class AFamily {
+    String name;
+    LocalDate dateOfBirth;
+    int roomNumber;
+    String favoriteDish;
+    boolean canSpeak;
+
+    public static void main(String[] args) {
+        AFamily member = new AFamily();
+        String name = "Artem";
+        member.listen("Artem can you hear me?");
+    }
+
+    public void eat(String servedDish) {
+        if (servedDish.equals(favoriteDish)) {
+            if (canSpeak) {
+                System.out.println("I'm loving it!");
+            } else {
+                System.out.println("Expression of happiness is shown by the grateful family member");
+            }
+        }
+    }
+
+    public void goSleep(int roomToSleep) {
+        if (roomToSleep == roomNumber) {
+            System.out.println("Family member goes to his/her room # " + roomNumber);
+        } else if (canSpeak) {
+            System.out.println("Room # " + roomToSleep + " is not my room!");
+        } else
+            System.out.println("Expression of misunderstanding is shown by the subject. Please try another room number.");
+    }
+
+    public void callAnotherFamilyMember(String calledName) {
+        if (canSpeak) {
+            if (calledName.equals(name)) {
+                System.out.println("Are you my namesake?");
+            } else {
+                System.out.println("Hey, " + calledName + "!");
+            }
+        } else {
+            System.out.println("This family member cannot call the other family member.");
+        }
+    }
+
+    public void listen(String speechInput) {
+        boolean flagisNEd = true;
+        do {
+            if (speechInput.contains(name)) {
+                System.out.println("Okay, are you trying to say " + speechInput + "?");
+                flagisNEd = false;
+            }
+        }
+        while (flagisNEd);
+    }
+}
