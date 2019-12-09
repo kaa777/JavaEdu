@@ -1,0 +1,70 @@
+package com.kaa.Lecture4;
+
+public class ADog {
+    String breed;
+    int numberOfPaws = 4;
+    int numberOfTeeth = 42;
+    int numberOfEyes = 2;
+    int numberOfEars = 2;
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public void bark(String barkVolume) {
+        boolean strangerIsAround = true;
+        switch (angerLevel.valueOf(barkVolume)) {
+            case NONE:
+                break;
+            case MINIMAL:
+                System.out.println("bark");
+                break;
+            case SOME:
+                System.out.println("bark-bark-bark");
+            case HEAVY:
+                do System.out.println("BARK!");
+                while (strangerIsAround = true);
+                System.out.println("BARK!");
+                break;
+
+        }
+    }
+
+    public void walk(String currentLocation, String desiredLocation) {
+        boolean tired = false;
+        if (currentLocation.equals(desiredLocation)) {
+
+        } else {
+            //move;
+        }
+    }
+
+    public void setNumberOfTeeth(int numberOfTeeth) {
+        this.numberOfTeeth = numberOfTeeth;
+    }
+
+    public void setNumberOfPaws(int numberOfPaws) {
+        this.numberOfPaws = numberOfPaws;
+    }
+
+    public void setNumberOfEyes(int numberOfEyes) {
+        this.numberOfEyes = numberOfEyes;
+    }
+
+    public void setNumberOfEars(int numberOfEars) {
+        this.numberOfEars = numberOfEars;
+    }
+
+    enum coat {SHORT, MEDIUM, LONG}
+
+    enum size {LARGE, MEDIUM, SMALL}
+
+    //enum shedding { NONE, MINIMAL, SOME, HEAVY }
+    enum earsType {ERECT, SEMIPRICKED, DROP}
+
+    enum angerLevel {NONE, MINIMAL, SOME, HEAVY}
+}
