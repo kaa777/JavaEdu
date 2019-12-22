@@ -1,0 +1,90 @@
+/*
+ * Copyright (c) 2019.
+ * This awful code is a property of Artem Kochergin.
+ * All rights reserved (но это не точно).
+ */
+
+package com.kaa.Lecture5mobilephones;
+
+public class MobilePhone {
+    //Create a class hierarchy for mobile phones.
+    //o There should be 5 methods that should be shared by inheritance
+    //o 1-2 unique methods for each class methods (ie, connectByMiniHDMI(), ring() etc)
+    //o Create constructors for hierarchy that will call its super’s.
+    //o Override several methods (at least 1 for each class). The method might call a parent’s
+    //method and do something unique.
+    //o Overload several methods in several classes from the hierarchy above
+    private double width;
+    private double length;
+    private double weight;
+    private String color;
+    private boolean hasScreen;
+    private String wirelessProtocolUsed;
+
+    public MobilePhone() {
+    }
+
+    public MobilePhone(double width, double length, double weight, String color, boolean hasScreen, String wirelessProtocolUsed) {
+        this.width = width;
+        this.length = length;
+        this.weight = weight;
+        this.color = color;
+        this.hasScreen = hasScreen;
+        this.wirelessProtocolUsed = wirelessProtocolUsed;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public boolean isHasScreen() {
+        return hasScreen;
+    }
+
+    public String getWirelessProtocolUsed() {
+        return wirelessProtocolUsed;
+    }
+
+    public void ring(boolean isCallIncoming, boolean isSoundOn) {
+        if (isCallIncoming == true && isSoundOn == true) {
+            System.out.println("Rrrrrring!");
+        }
+    }
+
+    public int outgoingCall(boolean isCallIncoming, boolean isNetworkConnected, int numberToCall) {
+        if (isCallIncoming == false && isNetworkConnected == true) {
+            System.out.println("Calling to number " + numberToCall);
+        } else {
+            System.out.println("Please try again later");
+        }
+        return numberToCall;
+    }
+
+    public int incomingCall(int numberCalling, boolean isSoundOn) {
+        if (isSoundOn == true) {
+            ring(true, true);
+        }
+        return numberCalling;
+    }
+
+}
